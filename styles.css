@@ -317,7 +317,6 @@ header::before {
   width: min(100%, 820px);
   display: flex;
   flex-wrap: nowrap;
-  gap: 60px;
   margin-inline: auto;
   align-items: center;
   margin-top: 40px;
