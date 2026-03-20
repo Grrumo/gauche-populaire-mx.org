@@ -1,4 +1,5 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://gauche-mx.org/sitemap.xml
+Sitemap: https://populaire.gauche-mx.org/sitemap.xml
+
