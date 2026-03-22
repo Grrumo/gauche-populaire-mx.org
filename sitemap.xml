@@ -17,14 +17,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://populaire.gauche-mx.org/fr/notre-programme.html</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://populaire.gauche-mx.org/fr/notre-programme.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://populaire.gauche-mx.org/es/nuestro-programa.html" />
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://populaire.gauche-mx.org/fr/comment-voter.html</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://populaire.gauche-mx.org/fr/comment-voter.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://populaire.gauche-mx.org/es/como-votar.html" />
@@ -47,14 +39,6 @@
     <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://populaire.gauche-mx.org/es/nuestro-programa.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://populaire.gauche-mx.org/es/nuestro-programa.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://populaire.gauche-mx.org/fr/notre-programme.html" />
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://populaire.gauche-mx.org/es/como-votar.html</loc>
