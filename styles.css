@@ -334,7 +334,7 @@ header::before {
 .soutien-logo {
   flex: 1 1 0;
   min-width: 0;
-  padding: 40px;
+  
   text-align: center;
   gap: 35px;
   display: grid;
@@ -356,14 +356,58 @@ header::before {
   border-radius: 900px;
 }
 .soutien-logo img {
-  max-width: 100%;
-  height: auto;
+  height: 80px;
+  width: auto;
+  object-fit: contain;
 }
 
 .soutien-logo h3 {
   margin-top: 8px;
   font-size: 1rem;
   color: var(--text);
+}
+
+@media (max-width: 374px) {
+  .soutien-section {
+    padding-inline: 20px;
+  }
+
+  .soutien-logos {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .soutien-logo {
+    width: 100%;
+    justify-items: center;
+  }
+}
+
+/* Media queries pour hauteur fixe par palier */
+@media (min-width: 480px) {
+  .soutien-logo img {
+    height: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .soutien-logo img {
+    height: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .soutien-logo img {
+    height: 140px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .soutien-logo img {
+    height: 160px;
+  }
 }
 
 
@@ -655,7 +699,7 @@ header::before {
   border-radius: 999px;
   background: linear-gradient(90deg, #7b13d6 0%, #ff1d1d 100%);
   color: #ffffff;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1;
   cursor: pointer;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);

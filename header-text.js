@@ -1,6 +1,6 @@
 const headerTextByLang = {
   fr: {
-    main: "La gauche française du <span class=\"header-highlight\">Mexique</span>",
+    main: "La gauche Française du <span class=\"header-highlight\">Mexique</span>",
     election: "Élections consulaires 2026",
   },
   es: {
