@@ -33,7 +33,7 @@
   --h4-family: var(--hn-family);
   --h4-weight: 400;
 
-  --header-title-size: 80px;
+  --header-title-size: 44px;
   --header-election-size: 64px;
 }
 
@@ -239,8 +239,17 @@ header::before {
   text-align: center;
 }
 
+.header-bold {
+  font-weight: 700;
+}
+
+.header-light {
+  font-weight: 300;
+}
+
 .header-highlight {
   color: #E4007C;
+  font-weight: 700;
 }
 
 .header-feature {
@@ -821,7 +830,7 @@ footer {
   }
 
   .header-banner h1 {
-    font-size: clamp(42px, 8vw, 64px);
+    font-size: clamp(28px, 5.5vw, 40px);
   }
 
   .header-feature h2 {
@@ -937,7 +946,7 @@ footer {
   }
 
   .header-banner h1 {
-    font-size: clamp(30px, 9.2vw, 36px);
+    font-size: clamp(18px, 5.5vw, 24px);
   }
 
   .header-feature h2 {

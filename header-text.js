@@ -1,10 +1,10 @@
 const headerTextByLang = {
   fr: {
-    main: "La gauche Française du <span class=\"header-highlight\">Mexique</span>",
+    main: "<span class=\"header-bold\">Nouvelle gauche populaire et écologiste</span><br><span class=\"header-light\">La voix humaniste des Français·es du <span class=\"header-highlight\">Mexique</span></span>",
     election: "Élections consulaires 2026",
   },
   es: {
-    main: "La izquierda francesa de <span class=\"header-highlight\">México</span>",
+    main: "<span class=\"header-bold\">Nueva izquierda popular y ecologista</span><br><span class=\"header-light\">La voz humanista de las y los franceses en <span class=\"header-highlight\">México</span></span>",
     election: "Elecciones consulares 2026",
   },
 };
