@@ -342,6 +342,14 @@ header::before {
   max-width: 100%;
 }
 
+.events-hero h2 {
+  font-size: clamp(32px, 5.5vw, 64px);
+  line-height: 1.2;
+  white-space: normal;
+  text-wrap: balance;
+  max-width: 100%;
+}
+
 .events-tools {
   width: min(100%, 1000px);
   margin: 0 auto;
