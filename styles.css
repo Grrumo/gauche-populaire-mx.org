@@ -288,6 +288,10 @@ header::before {
 
 .hero h1 {
   margin-bottom: 16px;
+  font-size: clamp(42px, 7vw, 86px);
+  white-space: nowrap;
+  text-wrap: nowrap;
+  max-width: 100%;
 }
 
 .hero p {
@@ -316,6 +320,114 @@ header::before {
 
 .page-program main {
   width: 100%;
+}
+
+.page-events main {
+  width: 100%;
+}
+
+.events-hero {
+  width: min(100%, 1040px);
+  margin: clamp(20px, 3.2vw, 40px) auto 8px;
+  padding: clamp(20px, 3.5vw, 40px);
+  gap: clamp(16px, 3.2vw, 28px);
+}
+
+.events-hero h1 {
+  /* Base size is intentionally lower than global h1. JS can shrink further if needed. */
+  font-size: clamp(42px, 7vw, 86px);
+  line-height: 1.05;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  max-width: 100%;
+}
+
+.events-tools {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 30px) clamp(16px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+
+.events-tools h3 {
+  text-align: center;
+}
+
+.events-tools ol {
+  width: min(100%, 72ch);
+  margin: 0 auto;
+  padding-left: 1.4rem;
+  display: grid;
+  gap: 8px;
+}
+
+.events-tools li {
+  font-family: var(--h4-family), sans-serif;
+  font-size: var(--h4-size);
+  line-height: 1.5;
+}
+
+.events-tools a {
+  color: var(--accent-dark);
+}
+
+.events-tools .gradient-text-button {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.events-table-wrap {
+  width: min(100%, 1040px);
+  margin: 0 auto 56px;
+  padding: 0 clamp(12px, 2vw, 24px);
+}
+
+.events-status {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.events-scroll {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  overflow: auto;
+  background: #ffffff;
+}
+
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.events-table thead th {
+  background: #f3f4f6;
+  color: #111827;
+  text-align: left;
+  font-family: var(--h4-family), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.events-table td {
+  font-family: var(--h4-family), sans-serif;
+  font-size: 17px;
+  line-height: 1.45;
+  padding: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  vertical-align: top;
+}
+
+.events-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.events-empty {
+  text-align: center;
+  color: #6b7280;
 }
 
 .page-program .hero {
@@ -591,6 +703,10 @@ header::before {
   text-align: center;
   margin: 0 0 calc(26px * var(--trombi-scale));
   padding: 40px;
+  font-size: clamp(42px, 7vw, 86px);
+  white-space: nowrap;
+  text-wrap: nowrap;
+  max-width: 100%;
 }
 
 .trombi-rows {
