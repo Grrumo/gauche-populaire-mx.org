@@ -455,6 +455,13 @@ header::before {
   text-wrap: balance;
 }
 
+.page-program .hero > h1,
+.page-events .hero > h1 {
+  line-height: 1.1;
+  white-space: normal;
+  text-wrap: balance;
+}
+
 .page-program .hero > img {
   width: min(100%, 760px);
   height: auto;
@@ -1059,6 +1066,16 @@ footer {
     line-height: 1.15;
   }
 
+  .page-program .hero > h1 {
+    font-size: clamp(34px, 9.5vw, 56px);
+  }
+
+  .page-program .hero > p,
+  .page-program .hero li {
+    font-size: clamp(16px, 4.1vw, 19px);
+    line-height: 1.55;
+  }
+
   .page-program .hero > img {
     width: 100%;
     max-width: 100%;
@@ -1068,6 +1085,39 @@ footer {
     margin-top: -6px;
     font-size: clamp(15px, 3.9vw, 18px);
     line-height: 1.5;
+  }
+
+  .events-hero {
+    width: min(100%, calc(100% - 24px));
+    padding: clamp(16px, 4.6vw, 28px);
+    gap: clamp(14px, 4vw, 22px);
+  }
+
+  .events-hero h1 {
+    font-size: clamp(30px, 10vw, 52px);
+    line-height: 1.12;
+    white-space: normal;
+    text-wrap: balance;
+  }
+
+  .events-hero h2 {
+    font-size: clamp(24px, 6.6vw, 34px);
+    line-height: 1.25;
+  }
+
+  .events-table {
+    min-width: 620px;
+  }
+
+  .events-table thead th {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .events-table td {
+    font-size: clamp(15px, 2.8vw, 17px);
+    line-height: 1.4;
+    padding: 10px;
   }
 
   .video-section {
@@ -1145,9 +1195,45 @@ footer {
     font-size: clamp(26px, 9vw, 34px);
   }
 
+  .page-program .hero > h1 {
+    font-size: clamp(28px, 10.5vw, 36px);
+  }
+
+  .page-program .hero > p,
+  .page-program .hero li {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
   .page-program .hero > img + p {
     margin-top: -2px;
     font-size: 14px;
+  }
+
+  .events-hero {
+    width: min(100%, calc(100% - 14px));
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .events-hero h1 {
+    font-size: clamp(26px, 10.2vw, 36px);
+    line-height: 1.15;
+  }
+
+  .events-hero h2 {
+    font-size: clamp(20px, 7.2vw, 28px);
+    line-height: 1.25;
+  }
+
+  .events-table {
+    min-width: 560px;
+  }
+
+  .events-table thead th,
+  .events-table td {
+    font-size: 14px;
+    padding: 9px;
   }
 
   .trombi-name {

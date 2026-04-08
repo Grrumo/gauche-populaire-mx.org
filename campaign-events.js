@@ -14,13 +14,13 @@
   const labels = {
     fr: {
       loading: "Chargement...",
-      loaded: "Synchronisé",
+      loaded: "À jour",
       empty: "Aucun événement programmé pour le moment.",
       loadError: "Réessayez plus tard."
     },
     es: {
       loading: "Cargando...",
-      loaded: "Sincronizado",
+      loaded: "Actualizado",
       empty: "No hay eventos programados por el momento.",
       loadError: "Reintenta más tarde."
     }

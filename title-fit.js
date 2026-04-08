@@ -3,6 +3,15 @@
  * Applies to: .hero h1, .events-hero h1, .trombi-board h2
  */
 function fitTitle(element) {
+  const computed = window.getComputedStyle(element);
+  const isSingleLineTitle = computed.whiteSpace === "nowrap";
+
+  // Let CSS handle responsive sizing when wrapping is allowed.
+  if (!isSingleLineTitle) {
+    element.style.removeProperty("font-size");
+    return;
+  }
+
   const maxPx = 86;
   const minPx = 26;
   let size = maxPx;
