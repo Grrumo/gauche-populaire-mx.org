@@ -12,6 +12,7 @@
   --muted: #9ca3af;
   --accent: #3885f4;
   --accent-dark: #1865cf;
+  --success: #00d14d;
 
   --hn-family: "config-variable", sans-serif;
 
@@ -67,6 +68,10 @@ p {
   font-family: var(--h4-family);
   font-size: var(--h4-size);
   font-weight: var(--h4-weight);
+}
+
+.participation-increase {
+  color: var(--success);
 }
 
 body {
@@ -276,14 +281,14 @@ header::before {
 
 .hero {
   background: var(--bg);
-  padding: 40px;
+
   display: grid;
   justify-items: center;
   text-align: center;
   width: 100%;
   max-width: 1000px;
   margin: 40px auto;
-  gap: 45px;
+  gap: 20px;
 }
 
 .hero h1 {
@@ -316,6 +321,92 @@ header::before {
   font-family: var(--h4-family), sans-serif;
   font-size: var(--h4-size);
   line-height: 1.6;
+}
+
+.hero ul.elected-list {
+  list-style: none;
+  padding-left: 0 !important;
+  text-align: center !important;
+}
+
+.elected-list li::before {
+  content: "\2022";
+  margin-right: 0.5em;
+}
+
+.presidential-message {
+  width: min(100%, 780px);
+  margin-inline: auto;
+  font-size: clamp(18px, 2vw, 24px) !important;
+}
+
+.candidate-figure {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  margin: 0 auto;
+}
+
+.candidate-portrait {
+  width: min(100%, 280px);
+  aspect-ratio: 1;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.candidate-figure figcaption {
+  font-family: var(--h4-family), sans-serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  line-height: 1.35;
+}
+
+.thanks-section {
+  width: min(100% - 48px, 1200px);
+  margin: 64px auto;
+  padding: clamp(24px, 5vw, 64px);
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(32px, 6vw, 88px);
+  text-align: left;
+
+}
+
+.thanks-portrait {
+  margin: 0;
+}
+
+.thanks-portrait img {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.thanks-content {
+  max-width: 720px;
+}
+
+.thanks-content h2 {
+  margin-bottom: 24px;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.05;
+}
+
+.thanks-content p {
+  margin-top: 16px;
+  font-size: clamp(18px, 2vw, 23px);
+  line-height: 1.55;
+}
+
+.thanks-content p:first-of-type {
+  margin-top: 0;
+}
+
+.thanks-signature {
+  margin-top: 28px !important;
 }
 
 .page-program main {
@@ -947,6 +1038,12 @@ header::before {
   justify-content: center;
 }
 
+.campaign-links .cta-wrap {
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: -50px 0 50px 0;
+}
+
 .gradient-text-button {
   display: inline-flex;
   align-items: center;
@@ -1053,6 +1150,26 @@ footer {
 
   .hero {
     padding: 28px;
+  }
+
+  .thanks-section {
+    width: min(100% - 24px, 720px);
+    margin: 40px auto;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 28px;
+  }
+
+  .thanks-portrait img {
+    max-width: 240px;
+  }
+
+  .thanks-content h2 {
+    font-size: clamp(34px, 9vw, 48px);
+  }
+
+  .thanks-content p {
+    font-size: clamp(16px, 4.1vw, 19px);
   }
 
   .page-program .hero {
