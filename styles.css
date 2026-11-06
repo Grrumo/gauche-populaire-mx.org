@@ -816,13 +816,11 @@ header::before {
 }
 
 .contact-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: clamp(24px, 4vw, 40px);
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px clamp(16px, 2vw, 40px);
+  padding: 0;
 }
 
 .keys-section {
@@ -853,21 +851,6 @@ header::before {
 .keys-section li a:hover,
 .keys-section li a:focus-visible {
   text-decoration: underline;
-}
-
-@media (max-width: 1024px) {
-  .contact-footer {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .social-section,
-  .contact-section,
-  .keys-section {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-  }
 }
 
 /* TROMBINOSCOPE */
