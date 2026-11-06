@@ -16,6 +16,13 @@
 
   --hn-family: "config-variable", sans-serif;
 
+  /* Breakpoints pour mobile-first */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1440px;
+
+  /* Typographie - Desktop */
   --h1-size: 128px;
   --h1-family: var(--hn-family);
   --h1-weight: 900;
@@ -36,6 +43,11 @@
 
   --header-title-size: 44px;
   --header-election-size: 64px;
+
+  /* Paddings responsives */
+  --padding-x-sm: 16px;
+  --padding-x-md: 24px;
+  --padding-x-lg: 40px;
 }
 
 h1 {
@@ -243,10 +255,14 @@ header::before {
 
 .header-banner h1 {
   margin: 1.6rem 0 0;
-  font-size: var(--header-title-size);
+  font-size: clamp(24px, 5vw, 44px);
   color: #ffffff;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
+  line-height: 1.2;
+  white-space: normal;
+  text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .header-bold {
@@ -264,23 +280,23 @@ header::before {
 
 .header-feature {
   display: flex;
-  align-items: flex-end;
-  gap: clamp(16px, 2.5vw, 26px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 2vw, 20px);
   margin-top: clamp(8px, 2vw, 18px);
+  width: 100%;
 }
 
 .header-feature img {
-  width: min(420px, 48%);
+  width: clamp(50px, 20vw, 300px);
   height: auto;
   object-fit: cover;
   display: block;
 }
 
 .header-feature h2 {
-  margin: 0;
-  color: #F91616;
-  font-size: var(--header-election-size);
-  line-height: 1.05;
+  display: none;
 }
 
 
@@ -298,10 +314,12 @@ header::before {
 
 .hero h1 {
   margin-bottom: 16px;
-  font-size: clamp(42px, 7vw, 86px);
-  white-space: nowrap;
-  text-wrap: nowrap;
+  font-size: clamp(28px, 7vw, 86px);
+  white-space: normal;
+  text-wrap: balance;
   max-width: 100%;
+  line-height: 1.1;
+  overflow-wrap: break-word;
 }
 
 .hero p {
@@ -431,11 +449,12 @@ header::before {
 
 .events-hero h1 {
   /* Base size is intentionally lower than global h1. JS can shrink further if needed. */
-  font-size: clamp(42px, 7vw, 86px);
-  line-height: 1.05;
-  white-space: nowrap;
-  text-wrap: nowrap;
+  font-size: clamp(28px, 7vw, 86px);
+  line-height: 1.1;
+  white-space: normal;
+  text-wrap: balance;
   max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .events-hero h2 {
@@ -556,6 +575,7 @@ header::before {
   line-height: 1.1;
   white-space: normal;
   text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .page-program .hero > img {
@@ -635,15 +655,15 @@ header::before {
   color: var(--text);
 }
 
-@media (max-width: 374px) {
+@media (max-width: 479px) {
   .soutien-section {
-    padding-inline: 20px;
+    padding-inline: 16px;
   }
 
   .soutien-logos {
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 28px;
+    gap: 20px;
     align-items: center;
   }
 
@@ -653,26 +673,26 @@ header::before {
   }
 }
 
-/* Media queries pour hauteur fixe par palier */
-@media (min-width: 480px) {
+/* Tailles images support par palier */
+@media (min-width: var(--bp-sm)) {
   .soutien-logo img {
     height: 100px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: var(--bp-md)) {
   .soutien-logo img {
     height: 120px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: var(--bp-lg)) {
   .soutien-logo img {
     height: 140px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: var(--bp-xl)) {
   .soutien-logo img {
     height: 160px;
   }
@@ -1081,34 +1101,160 @@ footer {
   font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
+/* MOBILE ULTRA-SMALL (320px) - Base mobile-first */
+@media (max-width: 479px) {
   :root {
-    --h1-size: 84px;
-    --h2-size: 52px;
-    --h3-size: 30px;
-    --h4-size: 18px;
+    --h1-size: 60px;
+    --h2-size: 38px;
+    --h3-size: 24px;
+    --h4-size: 16px;
+    --padding-x-sm: 12px;
   }
 
   .navbar {
-    align-items: center;
-    overflow: visible;
+    padding: 12px 16px;
   }
 
   header::before {
-    height: clamp(180px, 46vw, 300px);
+    height: clamp(180px, 50vw, 240px);
   }
 
   .header-banner h1 {
-    font-size: clamp(28px, 5.5vw, 40px);
+    font-size: clamp(18px, 5.5vw, 28px);
+    margin: 1rem 0 0;
   }
 
   .header-feature h2 {
-    font-size: clamp(36px, 6.8vw, 52px);
+    font-size: clamp(24px, 7.5vw, 36px);
   }
 
-  .nav-actions {
-    margin-left: auto;
-    flex-wrap: nowrap;
+  .hero {
+    padding: 20px 16px;
+    margin: 24px auto;
+    gap: 16px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 12px;
+  }
+
+  .hero h2 {
+    font-size: clamp(24px, 6.5vw, 36px);
+  }
+
+  .hero p,
+  .hero li {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .hero ul {
+    width: min(100%, 45rem);
+    margin: 8px auto 0;
+    padding-left: 1.2rem;
+    gap: 6px;
+  }
+
+  .video-section {
+    padding: 24px 16px 8px;
+  }
+
+  .social-section {
+    padding: 20px 16px 12px;
+  }
+
+  .contact-section {
+    padding: 20px 16px 16px;
+  }
+
+  .contact-mail-icon {
+    width: clamp(64px, 12vw, 80px);
+    height: clamp(64px, 12vw, 80px);
+  }
+
+  .contact-mail-text {
+    font-size: clamp(16px, 5vw, 24px);
+  }
+
+  .gradient-text-button {
+    min-height: 48px;
+    padding: 10px 16px;
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  .soutien-section {
+    padding: 40px 20px;
+  }
+
+  .soutien-logos {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .soutien-logo img {
+    height: 80px;
+  }
+
+  .page-program .hero,
+  .events-hero {
+    width: min(100%, calc(100% - 12px));
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .page-program .hero > h1,
+  .events-hero h1 {
+    font-size: clamp(26px, 9vw, 36px);
+  }
+
+  .page-program .hero > h2,
+  .events-hero h2 {
+    font-size: clamp(20px, 6.5vw, 28px);
+  }
+
+  .events-table {
+    min-width: 540px;
+  }
+
+  .events-table thead th,
+  .events-table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .biography-card {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .biography-identity .trombi-photo {
+    width: 88px;
+    height: 88px;
+  }
+
+  .trombi-name {
+    display: none;
+  }
+
+  .biography-identity .trombi-name {
+    display: block;
+  }
+
+  .thanks-section {
+    width: min(100% - 20px, 720px);
+    margin: 32px auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .thanks-content h2 {
+    font-size: clamp(26px, 8vw, 36px);
+  }
+
+  .thanks-content p {
+    font-size: clamp(15px, 3.5vw, 18px);
   }
 
   .menu-toggle {
@@ -1123,15 +1269,15 @@ footer {
     top: calc(100% + 8px);
     right: 0;
     z-index: 20;
-    min-width: 265px;
-    padding: 20px 10px 20px 0;
-    border-radius: 23px;
+    min-width: 260px;
+    padding: 16px 8px 16px 0;
+    border-radius: 20px;
     background: var(--bg);
     border: 1px solid rgba(0, 0, 0, 0.08);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
     flex-direction: column;
     align-items: flex-end;
-    gap: 20px;
+    gap: 16px;
   }
 
   .nav-links.is-open {
@@ -1145,57 +1291,160 @@ footer {
   .header-feature {
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 8px;
   }
 
   .header-feature img {
     width: 100%;
-    max-width: 100%;
+  }
+
+  .trombi-city {
+    display: none;
+  }
+
+  .biography-identity .trombi-city {
+    display: block;
+  }
+}
+
+/* MOBILE SMALL (480px) */
+@media (min-width: 480px) {
+  :root {
+    --h1-size: 84px;
+    --h2-size: 52px;
+    --h3-size: 30px;
+    --h4-size: 18px;
+    --padding-x-sm: 16px;
+  }
+
+  .hero {
+    padding: 24px;
+    margin: 32px auto;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 7.5vw, 56px);
+  }
+
+  .hero h2 {
+    font-size: clamp(28px, 6.8vw, 48px);
+  }
+
+  .hero p,
+  .hero li {
+    font-size: 18px;
+  }
+
+  .video-section {
+    padding: 28px 24px 10px;
+  }
+
+  .social-section {
+    padding: 26px 24px 14px;
+  }
+
+  .contact-section {
+    padding: 26px 24px 20px;
+  }
+
+  .soutien-section {
+    padding: 48px 32px;
+  }
+
+  .contact-mail-text {
+    font-size: clamp(20px, 5.5vw, 32px);
+  }
+
+  .gradient-text-button {
+    min-height: 52px;
+    padding: 11px 20px;
+    font-size: clamp(18px, 5vw, 24px);
+  }
+}
+
+/* TABLET (768px) */
+@media (min-width: 768px) {
+  :root {
+    --h1-size: 128px;
+    --h2-size: 64px;
+    --h3-size: 36px;
+    --h4-size: 23px;
+    --padding-x-md: 28px;
+  }
+
+  .navbar {
+    align-items: center;
+    overflow: visible;
+  }
+
+  header::before {
+    height: clamp(160px, 20vw, 220px);
+  }
+
+  .header-banner h1 {
+    font-size: clamp(32px, 6vw, 44px);
+  }
+
+  .header-feature h2 {
+    display: none;
   }
 
   .hero {
     padding: 28px;
+    margin: 40px auto;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 7vw, 72px);
+  }
+
+  .hero h2 {
+    font-size: clamp(32px, 5.5vw, 56px);
+  }
+
+  .hero p,
+  .hero li {
+    font-size: 20px;
+    line-height: 1.6;
   }
 
   .thanks-section {
-    width: min(100% - 24px, 720px);
-    margin: 40px auto;
-    grid-template-columns: 1fr;
-    gap: 28px;
+    width: min(100% - 28px, 720px);
+    margin: 48px auto;
+    grid-template-columns: minmax(200px, 280px) 1fr;
+    gap: 32px;
     padding: 28px;
   }
 
   .thanks-portrait img {
-    max-width: 240px;
+    max-width: 280px;
   }
 
   .thanks-content h2 {
-    font-size: clamp(34px, 9vw, 48px);
+    font-size: clamp(36px, 5vw, 56px);
   }
 
   .thanks-content p {
-    font-size: clamp(16px, 4.1vw, 19px);
+    font-size: clamp(18px, 2.2vw, 21px);
   }
 
   .page-program .hero {
-    width: min(100%, calc(100% - 24px));
-    padding: clamp(16px, 4.6vw, 28px);
-    gap: clamp(18px, 5vw, 30px);
-  }
-
-  .page-program .hero > h2 {
-    font-size: clamp(30px, 8.5vw, 46px);
-    line-height: 1.15;
+    width: min(100%, calc(100% - 28px));
+    padding: clamp(20px, 4vw, 32px);
+    gap: clamp(20px, 4vw, 32px);
   }
 
   .page-program .hero > h1 {
-    font-size: clamp(34px, 9.5vw, 56px);
+    font-size: clamp(42px, 7vw, 64px);
+  }
+
+  .page-program .hero > h2 {
+    font-size: clamp(32px, 6vw, 48px);
   }
 
   .page-program .hero > p,
   .page-program .hero li {
-    font-size: clamp(16px, 4.1vw, 19px);
-    line-height: 1.55;
+    font-size: clamp(18px, 2.2vw, 21px);
+    line-height: 1.6;
   }
 
   .page-program .hero > img {
@@ -1203,188 +1452,114 @@ footer {
     max-width: 100%;
   }
 
-  .page-program .hero > img + p {
-    margin-top: -6px;
-    font-size: clamp(15px, 3.9vw, 18px);
-    line-height: 1.5;
-  }
-
   .events-hero {
-    width: min(100%, calc(100% - 24px));
-    padding: clamp(16px, 4.6vw, 28px);
-    gap: clamp(14px, 4vw, 22px);
+    width: min(100%, calc(100% - 28px));
+    padding: clamp(20px, 4vw, 32px);
+    gap: clamp(16px, 3.5vw, 28px);
   }
 
   .events-hero h1 {
-    font-size: clamp(30px, 10vw, 52px);
-    line-height: 1.12;
-    white-space: normal;
-    text-wrap: balance;
+    font-size: clamp(42px, 7vw, 72px);
   }
 
   .events-hero h2 {
-    font-size: clamp(24px, 6.6vw, 34px);
-    line-height: 1.25;
+    font-size: clamp(28px, 5.5vw, 48px);
   }
 
   .events-table {
-    min-width: 620px;
+    min-width: 640px;
   }
 
   .events-table thead th {
-    font-size: 15px;
-    padding: 10px;
+    font-size: 16px;
+    padding: 11px;
   }
 
   .events-table td {
-    font-size: clamp(15px, 2.8vw, 17px);
-    line-height: 1.4;
-    padding: 10px;
+    font-size: clamp(16px, 2.5vw, 18px);
+    padding: 11px;
   }
 
   .video-section {
-    padding: 0 28px 10px;
+    padding: 32px 28px 12px;
   }
 
   .social-section {
-    padding: 26px 28px 14px;
+    padding: 28px 28px 16px;
   }
 
   .contact-section {
-    padding: 26px 28px 22px;
+    padding: 28px 28px 24px;
   }
 
   .contact-mail-text {
-    font-size: clamp(22px, 6vw, 34px);
+    font-size: clamp(26px, 4.5vw, 40px);
   }
 
   .gradient-text-button {
     min-height: 58px;
-    padding: 12px 24px;
-    font-size: clamp(20px, 6.6vw, 30px);
+    padding: 12px 28px;
+    font-size: clamp(20px, 2.8vw, 28px);
   }
 
-  .hero h1 {
-    font-size: calc(var(--h1-size) * 0.8333);
+  .soutien-section {
+    padding: 64px 40px;
   }
 
   .biography-card {
-    display: grid;
+    display: flex;
+    flex-direction: row;
   }
 
   .biography-identity .trombi-photo {
-    width: 112px;
-    height: 112px;
+    width: 120px;
+    height: 120px;
   }
 
   .biography-identity .trombi-city {
-    display: block;
+    display: none;
   }
 
   .trombi-city {
-    display: none;
+    display: block;
   }
-
 }
 
-@media (max-width: 375px) {
-  :root {
-    --h1-size: 60px;
-    --h2-size: 38px;
-    --h3-size: 24px;
-    --h4-size: 16px;
-  }
-
-  header::before {
-    height: clamp(190px, 56vw, 260px);
-  }
-
-  .header-banner h1 {
-    font-size: clamp(18px, 5.5vw, 24px);
-  }
-
-  .header-feature h2 {
-    font-size: clamp(26px, 8vw, 32px);
+/* DESKTOP SMALL (1024px) */
+@media (min-width: 1024px) {
+  .hero {
+    max-width: 1000px;
   }
 
   .page-program .hero {
-    width: min(100%, calc(100% - 14px));
-    padding: 14px;
-    gap: 16px;
-  }
-
-  .page-program .hero > h2 {
-    font-size: clamp(26px, 9vw, 34px);
-  }
-
-  .page-program .hero > h1 {
-    font-size: clamp(28px, 10.5vw, 36px);
-  }
-
-  .page-program .hero > p,
-  .page-program .hero li {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  .page-program .hero > img + p {
-    margin-top: -2px;
-    font-size: 14px;
+    width: min(100%, 1040px);
   }
 
   .events-hero {
-    width: min(100%, calc(100% - 14px));
-    padding: 14px;
-    gap: 12px;
+    width: min(100%, 1040px);
   }
 
-  .events-hero h1 {
-    font-size: clamp(26px, 10.2vw, 36px);
-    line-height: 1.15;
+  .thanks-section {
+    width: min(100% - 40px, 1200px);
+    gap: clamp(40px, 6vw, 88px);
   }
 
-  .events-hero h2 {
-    font-size: clamp(20px, 7.2vw, 28px);
-    line-height: 1.25;
+  .biography-card {
+    gap: clamp(16px, 2.5vw, 28px);
+  }
+}
+
+/* DESKTOP LARGE (1440px) */
+@media (min-width: 1440px) {
+  :root {
+    --padding-x-lg: 48px;
   }
 
-  .events-table {
-    min-width: 560px;
+  .soutien-section {
+    padding: 80px 48px;
   }
 
-  .events-table thead th,
-  .events-table td {
-    font-size: 14px;
-    padding: 9px;
+  .thanks-section {
+    padding: clamp(40px, 5vw, 64px);
   }
-
-  .trombi-name {
-    display: none;
-  }
-
-  .gradient-text-button {
-    min-height: 52px;
-    padding: 10px 18px;
-  }
-
-  .contact-mail-icon {
-    margin-top: 18px;
-    margin-bottom: 14px;
-  }
-
-  .contact-mail-text {
-    font-size: clamp(18px, 7vw, 24px);
-    line-height: 1.2;
-    overflow-wrap: anywhere;
-  }
-
-  .biography-identity .trombi-name {
-    display: block;
-  }
-
-  .biography-identity .trombi-photo {
-    width: 96px;
-    height: 96px;
-  }
-
 }
