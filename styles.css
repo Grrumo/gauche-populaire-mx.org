@@ -814,6 +814,62 @@ header::before {
 .contact-mail-text:focus-visible {
   text-decoration: underline;
 }
+
+.contact-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 4vw, 40px);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px clamp(16px, 2vw, 40px);
+}
+
+.keys-section {
+  width: 100%;
+  padding: 34px 40px 28px;
+  text-align: center;
+}
+
+.keys-section h2 {
+  margin: 0 0 24px 0;
+}
+
+.keys-section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.keys-section li a {
+  color: var(--accent);
+  text-decoration: none;
+  font-family: var(--h4-family);
+  font-size: clamp(16px, 2.2vw, 20px);
+  font-weight: 400;
+}
+
+.keys-section li a:hover,
+.keys-section li a:focus-visible {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .contact-footer {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .social-section,
+  .contact-section,
+  .keys-section {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
 /* TROMBINOSCOPE */
 .trombi-section {
   margin-top: 40px;
