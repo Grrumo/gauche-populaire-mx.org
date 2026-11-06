@@ -111,9 +111,10 @@ header::before {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  height: clamp(120px, 18vw, 180px);
+  bottom: -120%;
+  height: clamp(400px, 65vw, 650px);
   background: var(--bg);
+  z-index: 0;
 }
 
 .navbar {
@@ -1116,7 +1117,7 @@ footer {
   }
 
   header::before {
-    height: clamp(180px, 50vw, 240px);
+    height: clamp(380px, 70vw, 550px);
   }
 
   .header-banner h1 {
@@ -1377,7 +1378,7 @@ footer {
   }
 
   header::before {
-    height: clamp(160px, 20vw, 220px);
+    height: clamp(350px, 45vw, 500px);
   }
 
   .header-banner h1 {
