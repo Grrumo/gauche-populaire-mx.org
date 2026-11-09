@@ -103,19 +103,8 @@ main img {
 header {
   background: var(--line-gradient);
   position: relative;
-  overflow: hidden;
 }
 
-header::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -120%;
-  height: clamp(400px, 65vw, 650px);
-  background: var(--bg);
-  z-index: 0;
-}
 
 .navbar {
   max-width: 1100px;
@@ -128,10 +117,9 @@ header::before {
   background: var(--bg);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  overflow: hidden;
   position: relative;
   z-index: 2;
-  
+
 }
 
 .logo {
