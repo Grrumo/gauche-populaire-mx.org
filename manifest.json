@@ -1,0 +1,34 @@
+{
+  "name": "Nouvelle gauche populaire et écologiste du Mexique",
+  "short_name": "Gauche Pop Mexique",
+  "description": "La voix humaniste des Français·es du Mexique - Élections consulaires 2026",
+  "start_url": "/fr/accueil.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7B13D6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/images/LogoVector.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/images/LogoFR.webp",
+      "sizes": "540x720",
+      "type": "image/webp"
+    },
+    {
+      "src": "/assets/images/LogoES.webp",
+      "sizes": "540x720",
+      "type": "image/webp"
+    }
+  ],
+  "categories": ["politics"],
+  "scope": "/",
+  "lang": "fr-FR",
+  "dir": "ltr"
+}
